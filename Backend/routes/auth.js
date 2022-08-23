@@ -197,7 +197,7 @@ let transporter = nodemailer.createTransport({
 });
 
 //    *****************************    Generate OTP API    *********************************************
-let sta=false;
+var sta;
 router.post('/gotp'
   , async (req, res) => {
    
@@ -211,14 +211,14 @@ router.post('/gotp'
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-          sta=false
+          sta='f'
        console.log(error);
         }
         else
         {
         console.log('Message sent: %s', info.messageId);
         console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info)); 
-        sta=true;  
+        sta='t';  
            
         }
   

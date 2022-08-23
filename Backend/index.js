@@ -27,13 +27,13 @@ app.use('/api/auth',require('./routes/auth'))
 
 
 
-app.listen(port, '192.168.43.92' , () => {
-  console.log(`project app listening on port ${port}`)
-})
+// app.listen(port, '192.168.43.92' , () => {
+//   console.log(`project app listening on port ${port}`)
+// })
 
-// app.listen(port , () => {
-//     console.log(`project app listening on port ${port}`)
-//   })
+app.listen(port , () => {
+    console.log(`project app listening on port ${port}`)
+  })
 
 
 

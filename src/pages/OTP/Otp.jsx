@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import Logo from '../../components/Logo/Logo';
 import "../../pages/OTP/Otp.css";
+import { useNavigate } from 'react-router-dom';
 
 const Otp = () => {
+  const navigate = useNavigate();
 
 const [box, setBox] = useState(true);
 const [btn, setBtn] = useState(true);
@@ -21,7 +23,7 @@ const handlesubmit=async(e)=>{
 const json=await response.json();
 if(json.veri)
 {
-  navigate('/success');
+  navigate('/AdminDashboard');
   console.log('OTP Successed')
 }
 else

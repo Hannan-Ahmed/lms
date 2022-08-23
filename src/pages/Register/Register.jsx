@@ -30,7 +30,7 @@ const [credential,setcredential]=useState({email:"",password:""})
 const handlesubmit=async(e)=>{
     e.preventDefault();
 
-    const response = await fetch(`http://192.168.43.92:5000/api/auth/login`, {
+    const response = await fetch(`http://localhost:5000/api/auth/login`, {
       method: 'POST', 
     headers: {
         'Content-Type': 'application/json'
@@ -86,7 +86,7 @@ const {firstname, lastname, email, cnic, designation, contactno, password, statu
 
 try{
 
-const response = await fetch("http://192.168.43.92:5000/api/auth/createuser", {
+const response = await fetch("http://localhost:5000/api/auth/createuser", {
 method: "POST",
 headers: {
 "Content-Type": "application/json", },
@@ -97,7 +97,7 @@ console.log(data);
 
 
 
-   const response2 = await fetch(`http://192.168.43.92:5000/api/auth/gotp`, {
+   const response2 = await fetch(`http://localhost:5000/api/auth/gotp`, {
       method: 'POST', 
      headers: {
         'Content-Type': 'application/json'
@@ -106,7 +106,9 @@ console.log(data);
     });
 
     const json2=await response2.json();
-    if (!json2.sta) {     
+
+
+    if (json2.sta==='f') {     
         console.log("Otp Not Sent");
       }
       else{
@@ -125,12 +127,6 @@ console.log(data);
 
 
 
-//Navigating to OTP
-
-// if(data.success==='signed')
-// {
-// navigate('/Otp')
-// }
 
 
 

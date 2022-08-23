@@ -304,7 +304,6 @@ border-radius: 1em;
 }
 
 .modal-dialog{
-
 left: 270px;
 }
 
@@ -318,7 +317,8 @@ left: 270px;
             width: 25%;
             overflow: hidden;
         }
-
+        
+       
         .form-container .box-btn {
                     width: 30% !important;
                 }
@@ -334,8 +334,12 @@ left: 270px;
 .modal-body .modal-intro p {
     font-size: 1em !important;
 } 
-                
+
 }
 
-
+@media screen and (max-width: 696px) {
+.modal-dialog{
+    left: -0px;
+    }
+}
 /* Media Query ends here */
