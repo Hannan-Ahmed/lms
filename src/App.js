@@ -3,12 +3,12 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Register from "./pages/Register/Register";
 import Otp from './pages/OTP/Otp';
-import AdminDashboard from './Dashboards/AdminDashboard';
+import AdminDashboard from './Dashboards/AdminDashboard/AdminDashboard';
 
 const App = () => {
   return (
    <>
-
+{/* 
 <BrowserRouter>
 
 <Routes>
@@ -18,7 +18,9 @@ const App = () => {
 
 </Routes>
 
-</BrowserRouter>
+</BrowserRouter> */}
+
+<AdminDashboard/>
 
 
 
