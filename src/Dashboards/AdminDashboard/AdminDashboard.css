@@ -35,3 +35,65 @@ color: white;
 .menubar .items ul#tagi li:last-child  {
     margin-top: 216px;
  }
+ .head{
+    display: flex;
+ }
+
+
+ /*            Dashboard content starts              */
+
+/* title */
+
+.head .content .title{
+    color:black;
+    font-size: 36px;
+    font-weight: 500;
+    display: block;
+    padding: 15px;
+}
+
+/* title */
+.head .content .image img{
+border-radius: 50%;
+height: 50px;
+width: 50px;
+margin-top: 18px;
+
+}
+/* title and image both */
+.head .content .tops{
+display: flex;
+justify-content: space-between;
+}
+/* image setting */
+.head .content .tops .image{
+    margin-left: 670px;
+    /* overflow: visible;   gaib nahi hota is se .....media query me is per kaaam karna he*/
+}
+
+
+.head .content .grids
+{
+    margin-left: 57px;
+    margin-top: 20px;
+}
+/* grid  Styling*/
+
+.card-img, .card-img-top {
+        height: 130px;
+        
+}
+
+.card-body {
+    flex: 1 1 aut;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    color: var(--bs-card-color);
+    /* height: 180px;
+    width: 290px; */
+    border-radius: 60px;
+}
+
+.card{
+    height: 279px;
+    width: 250px;
+}
