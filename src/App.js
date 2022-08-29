@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Register from "./pages/Register/Register";
 import Otp from './pages/OTP/Otp';
 import AdminDashboard from './Dashboards/AdminDashboard/AdminDashboard';
+import Cards from './components/Cards/Cards';
 
 const App = () => {
   return (

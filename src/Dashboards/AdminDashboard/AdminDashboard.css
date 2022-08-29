@@ -1,216 +1,315 @@
-
-.menubar{
-border: 2px solid black;
-width: 200px;
-/* height: 595px; */
-height: auto;
-background-color: black;
-position: fixed;
-overflow: hidden;
-z-index: 9999;
+.menubar {
+  border: 2px solid black;
+  width: 200px;
+  /* height: 595px; */
+  height: auto;
+  background-color: black;
+  position: fixed;
+  overflow: hidden;
+  z-index: 9999;
 }
 
-.menubar #heading{
-    color: rgb(255, 255, 255);
-    font-size: 38px;
-    font-weight: 500;
-   padding: 50px;
+.menubar #heading {
+  color: rgb(255, 255, 255);
+  font-size: 38px;
+  font-weight: 500;
+  padding: 50px;
 }
+
 /*   content in menu bar  */
 
-.menubar .items .tags{
-color: white;
-    margin-top: 50px;
-        margin-left: 13px;
+.menubar .items .tags {
+  color: white;
+  margin-top: 50px;
+  margin-left: 13px;
 
 }
-.menubar .items ul li{
-    
 
-    padding: 10px;
-    list-style: none;
-    font-size: 19px;
+.menubar .items ul li {
+
+
+  padding: 10px;
+  list-style: none;
+  font-size: 19px;
 }
 
 
 
-.menubar .items ul#tagi li:last-child  {
-    margin-top: 216px;
- }
- .head{
-    display: flex;
- }
+.menubar .items ul#tagi li:last-child {
+  margin-top: 216px;
+}
+
+.head {
+  display: flex;
+}
 
 
- /*            Dashboard content starts              */
+/*            Dashboard content starts              */
 
 /* title */
 
-.head .content .title{
-    color:white;
-    font-size: 36px;
-    font-weight: 500;
-    display: block;
-    padding: 15px;
-    margin-left: 200px;
-    position: fixed;
-   
+.head .content .title {
+  color: black;
+  font-size: 36px;
+  font-weight: 500;
+  display: block;
+  /* padding: 15px; */
+  margin-left: 216px;
+  margin-top: 6px;
+
+  position: fixed;
+
 }
 
 /* title */
-.head .content .image img{
-border-radius: 50%;
-height: 50px;
-width: 50px;
-margin-top: 18px;
-margin-left: 500px;
+.head .content .image img {
+  border-radius: 50%;
+  height: 50px;
+  /* width: 175vh;
+  height: 15vh;
+  display: flex;
+  flex-direction: row-reverse; */
+  /* width: 50px;
+  margin-top: 10px;
+  margin-left: 500px; */
 
 }
+
 /* title and image both */
-.head .content .tops{
-display: flex;
-justify-content: space-between;
-position: fixed;
-background: linear-gradient(90deg, rgba(7,50,148,1) 0%, rgba(44,182,210,1) 0%, rgba(8,10,24,1) 0%, rgba(25,173,68,1) 50%, rgba(4,5,12,1) 100%, rgba(0,0,0,1) 100%, rgba(9,9,121,1) 100%, rgba(8,8,18,1) 100%);width: 100%;
-/* background: black; */
-z-index: 999;
-width: 100%;
-
+.head .content .tops {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  background-color: white;
+  /* background: linear-gradient(90deg, rgba(7,50,148,1) 0%, rgba(44,182,210,1) 0%, rgba(8,10,24,1) 0%, rgba(25,173,68,1) 50%, rgba(4,5,12,1) 100%, rgba(0,0,0,1) 100%, rgba(9,9,121,1) 100%, rgba(8,8,18,1) 100%);width: 100%; */
+  /* background: black; */
+  z-index: 999;
+  width: 100%;
+  height: 60px;
 
 }
+
 /* image setting */
-.head .content .tops .image{
-    margin-left: 670px;
-    margin-bottom: 5px;
-    /* overflow: visible;   gaib nahi hota is se .....media query me is per kaaam karna he*/
+.head .content .tops .image {
+
+  margin-left: 690px;
+  margin-bottom: -20px;
+  /* overflow: visible;   gaib nahi hota is se .....media query me is per kaaam karna he*/
+
+
 }
 
 
-.head .content .grids
-{
-    margin-left: 186px;
-    margin-top: 80px;
-    overflow-y: visible;
-    
+.head .content .grids {
+  /* margin-left: 126px; */
+  margin-top: 80px;
+  /* overflow-y: visible; */
+  grid-gap: 60px;
 }
+
 /* grid  Styling*/
 
-.card-img, .card-img-top {
-        height: 130px;
-        
-}
-
-/* .card-body {
-    flex: 1 1 aut;
-    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
-    color: var(--bs-card-color);
-    height: 180px;
-    width: 290px;
-    border-radius: 60px;
-} */
-
-.card{
-    height: 279px;
-    width: 230px;
-}
-.grids .row{
-  padding: 20px;
-}
-
-.head .content .row {
-    margin-top: 30px;
-}
 
 
 
-.menubar  #nav-check {
+.menubar #nav-check {
   display: none;
 }
-@media screen  and (max-width:600px) {
-  
-    .menubar  .nav-btn {
-      display: inline-block;
-      position: absolute;
-      right: 0px;
-      top: 0px;
-    }
-    .menubar  .nav-btn  label {
-      display: inline-block;
-      width: 50px;
-      height: 50px;
-      padding: 13px;
-    }
-     .menubar  .nav-btn  label  span {
-      display: block;
-      width: 25px;
-      height: 10px;
-      border-top: 2px solid rgb(115, 7, 7);
-      /* z-index: 999999; */
-    }
-     .menubar  .nav-links {
-      position: fixed;
-      /* display: inline; */
-      width: 100%;
-      background-color: #333;
-      height: 100%;
-      transition: all 0.3s ease-in;
-      overflow-y: visible;
-      top: 50px;
-      left: 0px;
-    }
-    .menubar  .nav-links  a {
-      display: block;
-      width: 100%;
-    }
-   /* .menubar > #nav-check:not(:checked) ~ .nav-links {
-      height: 0px;
-    } */
-    .menubar  #nav-check:checked ~ .nav-links {
-      /* height: calc(100vh - 50px); */
-      height:1px;
-      width: 100%;
-      overflow-y: hidden;
-      
-    }
-    .menubar{
-      height: 50px;
-      width: 100%;
-    }
-    .menubar .items ul#tagi li:last-child  {
-      margin-top: 0px;
-   }
-   .menubar .items .tags{
-    color: white;
-        margin-top: 50px;
-            margin-left: 13px;
-    text-align: center;
-    }
-    .menubar .items .tags li:hover{
-      color: aqua;
-    }
 
 
-    /* admin title and image styling */
-    .head .content .tops{
-      margin-top: 50px;
-      /* margin-left: -420px; */
-      width: 100%;
-      
-    }
-    .head .content .tops .image{
-      margin-left: 220px;
-      margin-bottom: 5px;
-      overflow: visible; 
-        /* gaib nahi hota is se .....media query me is per kaaam karna he */
-  }
-  .head .content .grids
-  {
-      margin-left: 0px;
-      margin-top: 150px;  
-      
-    }
+/* ********************************************************************************************** */
 
-  .head .content .row {
-    margin-top: 30px;
+
+.head .content .grids {
+  /* margin-left: 186px;
+      margin-top: 80px; */
+
+  /* overflow-y: visible; */
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 18rem);
+  justify-content: center;
+  margin-left: 144px;
 }
+
+/* grid  Styling*/
+
+.card-img,
+.card-img-top {
+  height: 130px;
+
+}
+
+.card-body {
+  box-shadow: 1px 2px 3px #9c9c9c;
+}
+
+.card {
+  height: 239px;
+  width: 305px;
+}
+
+.grids .row {
+  padding: 20px;
+  grid-row-gap: 30px;
+
+}
+
+
+
+.head .content .row {
+  margin-top: 30px;
+
+}
+
+.image {
+  width: 98vh;
+  height: 15vh;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 5px;
+}
+
+
+
+
+
+
+
+/* ********************************************************************************************** */
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:800px) {
+
+.menubar{
+  position: fixed;
+}
+
+  .menubar .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
   }
+
+  .menubar .nav-btn label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+
+  .menubar .nav-btn label span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid rgb(115, 7, 7);
+    /* z-index: 999999; */
+  }
+
+  .menubar .nav-links {
+    position: fixed;
+    /* display: inline; */
+    width: 100%;
+    background-color: #333;
+    height: 100%;
+    transition: all 0.3s ease-in;
+    overflow-y: visible;
+    top: 50px;
+    left: 0px;
+  }
+
+  /* .menubar .nav-links a {
+    display: block;
+    width: 100%;
+  } */
+
+  .menubar .nav-links .items .tags li{
+    font-size: 40px;
+  }
+
+  /* .menubar > #nav-check:not(:checked) ~ .nav-links {
+        height: 0px;
+      } */
+  .menubar #nav-check:checked~.nav-links {
+    /* height: calc(100vh - 50px); */
+    height: 1px;
+    width: 100%;
+    overflow-y: hidden;
+
+  }
+
+  .menubar {
+    height: 50px;
+    width: 100%;
+  }
+
+  .menubar .items ul#tagi li:last-child {
+    margin-top: 0px;
+  }
+
+  .menubar .items .tags {
+    color: white;
+    margin-top: 50px;
+    margin-left: 13px;
+    text-align: center;
+  }
+
+  .menubar .items .tags li:hover {
+    color: aqua;
+  }
+
+
+  /* admin title and image styling */
+  .head .content .tops {
+    margin-top: 50px;
+    /* margin-left: 0px; */
+    background-color: #333;
+
+  }
+
+  .head .content .tops .title {
+    margin-left: 12px;
+    font-size: 30px;
+    color: white;
+    font-weight: 400;
+  }
+
+  .head .content .tops .image {
+    margin-left: 180px;
+    margin-bottom: 5px;
+    overflow: visible;
+    /* gaib nahi hota is se .....media query me is per kaaam karna he */
+  }
+
+  /* .head .content .grids
+    {
+        margin-left: 0px;
+        margin-top: 150px;  
+        
+      }
+  
+    .head .content .row {
+      margin-top: 30px;
+  } */
+  .head .content .grids {
+    /* margin-left: 186px;
+      margin-top: 80px; */
+
+    /* overflow-y: visible; */
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit);
+    /* justify-content: center;  */
+    margin-left: 1px;
+
+  }
+
+}

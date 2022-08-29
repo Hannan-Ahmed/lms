@@ -1,0 +1,176 @@
+
+.head .content .grids {
+    /* margin-left: 126px; */
+    margin-top: 80px;
+    /* overflow-y: visible; */
+    grid-gap: 60px;
+  }
+
+  .head .content .grids {
+    /* margin-left: 186px;
+        margin-top: 80px; */
+  
+    /* overflow-y: visible; */
+  
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 18rem);
+    justify-content: center;
+    margin-left: 144px;
+  }
+  
+  /* grid  Styling*/
+  
+  .card-img,
+  .card-img-top {
+    height: 130px;
+  
+  }
+  
+  .card-body {
+    box-shadow: 1px 2px 3px #9c9c9c;
+  }
+  
+  .card {
+    height: 239px;
+    width: 305px;
+  }
+  
+  .grids .row {
+    padding: 20px;
+    grid-row-gap: 30px;
+  
+  }
+  
+  
+  
+  .head .content .row {
+    margin-top: 30px;
+  
+  }
+
+
+  @media screen and (max-width:800px) {
+
+    .menubar{
+      position: fixed;
+    }
+    
+      .menubar .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+      }
+    
+      .menubar .nav-btn label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+      }
+    
+      .menubar .nav-btn label span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid rgb(115, 7, 7);
+        /* z-index: 999999; */
+      }
+    
+      .menubar .nav-links {
+        position: fixed;
+        /* display: inline; */
+        width: 100%;
+        background-color: #333;
+        height: 100%;
+        transition: all 0.3s ease-in;
+        overflow-y: visible;
+        top: 50px;
+        left: 0px;
+      }
+    
+      /* .menubar .nav-links a {
+        display: block;
+        width: 100%;
+      } */
+    
+      .menubar .nav-links .items .tags li{
+        font-size: 40px;
+      }
+    
+      /* .menubar > #nav-check:not(:checked) ~ .nav-links {
+            height: 0px;
+          } */
+      .menubar #nav-check:checked~.nav-links {
+        /* height: calc(100vh - 50px); */
+        height: 1px;
+        width: 100%;
+        overflow-y: hidden;
+    
+      }
+    
+      .menubar {
+        height: 50px;
+        width: 100%;
+      }
+    
+      .menubar .items ul#tagi li:last-child {
+        margin-top: 0px;
+      }
+    
+      .menubar .items .tags {
+        color: white;
+        margin-top: 50px;
+        margin-left: 13px;
+        text-align: center;
+      }
+    
+      .menubar .items .tags li:hover {
+        color: aqua;
+      }
+    
+    
+      /* admin title and image styling */
+      .head .content .tops {
+        margin-top: 50px;
+        /* margin-left: 0px; */
+        background-color: #333;
+    
+      }
+    
+      .head .content .tops .title {
+        margin-left: 12px;
+        font-size: 30px;
+      }
+    
+      .head .content .tops .image {
+        margin-left: 180px;
+        margin-bottom: 5px;
+        overflow: visible;
+        /* gaib nahi hota is se .....media query me is per kaaam karna he */
+      }
+    
+      /* .head .content .grids
+        {
+            margin-left: 0px;
+            margin-top: 150px;  
+            
+          }
+      
+        .head .content .row {
+          margin-top: 30px;
+      } */
+      .head .content .grids {
+        /* margin-left: 186px;
+          margin-top: 80px; */
+    
+        /* overflow-y: visible; */
+    
+        display: grid;
+        grid-template-columns: repeat(auto-fit);
+        /* justify-content: center;  */
+        margin-left: 1px;
+    
+      }
+    
+    }    

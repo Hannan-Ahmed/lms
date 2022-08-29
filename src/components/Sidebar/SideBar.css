@@ -1,0 +1,44 @@
+.menubar {
+    border: 2px solid black;
+    width: 200px;
+    /* height: 595px; */
+    height: auto;
+    background-color: black;
+    position: fixed;
+    overflow: hidden;
+    z-index: 9999;
+  }
+  
+  .menubar #heading {
+    color: rgb(255, 255, 255);
+    font-size: 38px;
+    font-weight: 500;
+    padding: 50px;
+  }
+  
+  /*   content in menu bar  */
+  
+  .menubar .items .tags {
+    color: white;
+    margin-top: 50px;
+    margin-left: 13px;
+  
+  }
+  
+  .menubar .items ul li {
+  
+  
+    padding: 10px;
+    list-style: none;
+    font-size: 19px;
+  }
+  
+  
+  
+  .menubar .items ul#tagi li:last-child {
+    margin-top: 216px;
+  }
+  
+  .head {
+    display: flex;
+  }
