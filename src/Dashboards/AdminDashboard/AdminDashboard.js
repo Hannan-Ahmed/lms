@@ -40,7 +40,7 @@ function AdminDashboard() {
 
           <div className='tops'>
             <span className='title' >Admin Dashboard</span>
-            <span className='image'><img src="https://tse2.mm.bing.net/th?id=OIP.XObaaZHwiDhSKO7robVNugHaNv&pid=Api&P=0" /></span>
+            <span className='image'><img src="https://tse3.mm.bing.net/th?id=OIP.nguLi5n5GJQ07qlkQCmsAQHaHa&pid=Api&P=0" /></span>
           </div>
 
           {/* ********************************************- Grid DIV - ************************************************** */}
@@ -51,14 +51,14 @@ function AdminDashboard() {
             <div class="row">
 
               <div class="col">
-                
+
                 <div class="card" >
                   <img src="https://tse3.mm.bing.net/th?id=OIP.9wGX5ctrMCmEjI3PMs_pBwHaEK&pid=Api&P=0" class="card-img-top" alt="..." />
                   <div class="card-body">
                     <h5 class="card-title">Mohammad Ali</h5>
                     <p class="card-text">Assistent Professor</p>
                     <a href="#" class="btn btn-primary">View Profile</a>
-                  </div> 
+                  </div>
                 </div>
 
 
@@ -66,27 +66,27 @@ function AdminDashboard() {
               </div>
 
               <div class="col">
-                
-              <div class="card" >
+
+                <div class="card" >
                   <img src="https://tse3.mm.bing.net/th?id=OIP.9wGX5ctrMCmEjI3PMs_pBwHaEK&pid=Api&P=0" class="card-img-top" alt="..." />
                   <div class="card-body">
                     <h5 class="card-title">Mohammad Ali</h5>
                     <p class="card-text">Assistent Professor</p>
                     <a href="#" class="btn btn-primary">View Profile</a>
-                  </div> 
+                  </div>
                 </div>
 
               </div>
 
               <div class="col">
-                
-              <div class="card" >
+
+                <div class="card" >
                   <img src="https://tse3.mm.bing.net/th?id=OIP.9wGX5ctrMCmEjI3PMs_pBwHaEK&pid=Api&P=0" class="card-img-top" alt="..." />
                   <div class="card-body">
                     <h5 class="card-title">Mohammad Ali</h5>
                     <p class="card-text">Assistent Professor</p>
                     <a href="#" class="btn btn-primary">View Profile</a>
-                  </div> 
+                  </div>
                 </div>
 
               </div>
@@ -98,149 +98,149 @@ function AdminDashboard() {
 
             <div class="row">
 
-<div class="col">
-  
-  <div class="card" >
-    <img src="https://tse3.mm.bing.net/th?id=OIP.9wGX5ctrMCmEjI3PMs_pBwHaEK&pid=Api&P=0" class="card-img-top" alt="..." />
-    <div class="card-body">
-      <h5 class="card-title">Mohammad Ali</h5>
-      <p class="card-text">Assistent Professor</p>
-      <a href="#" class="btn btn-primary">View Profile</a>
-    </div> 
-  </div>
+              <div class="col">
+
+                <div class="card" >
+                  <img src="https://tse3.mm.bing.net/th?id=OIP.9wGX5ctrMCmEjI3PMs_pBwHaEK&pid=Api&P=0" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Mohammad Ali</h5>
+                    <p class="card-text">Assistent Professor</p>
+                    <a href="#" class="btn btn-primary">View Profile</a>
+                  </div>
+                </div>
 
 
 
-</div>
+              </div>
 
-<div class="col">
-  
-<div class="card" >
-    <img src="https://tse3.mm.bing.net/th?id=OIP.9wGX5ctrMCmEjI3PMs_pBwHaEK&pid=Api&P=0" class="card-img-top" alt="..." />
-    <div class="card-body">
-      <h5 class="card-title">Mohammad Ali</h5>
-      <p class="card-text">Assistent Professor</p>
-      <a href="#" class="btn btn-primary">View Profile</a>
-    </div> 
-  </div>
+              <div class="col">
 
-</div>
+                <div class="card" >
+                  <img src="https://tse3.mm.bing.net/th?id=OIP.9wGX5ctrMCmEjI3PMs_pBwHaEK&pid=Api&P=0" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Mohammad Ali</h5>
+                    <p class="card-text">Assistent Professor</p>
+                    <a href="#" class="btn btn-primary">View Profile</a>
+                  </div>
+                </div>
 
-<div class="col">
-  
-<div class="card" >
-    <img src="https://tse3.mm.bing.net/th?id=OIP.9wGX5ctrMCmEjI3PMs_pBwHaEK&pid=Api&P=0" class="card-img-top" alt="..." />
-    <div class="card-body">
-      <h5 class="card-title">Mohammad Ali</h5>
-      <p class="card-text">Assistent Professor</p>
-      <a href="#" class="btn btn-primary">View Profile</a>
-    </div> 
-  </div>
+              </div>
 
-</div>
+              <div class="col">
 
-</div>
+                <div class="card" >
+                  <img src="https://tse3.mm.bing.net/th?id=OIP.9wGX5ctrMCmEjI3PMs_pBwHaEK&pid=Api&P=0" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Mohammad Ali</h5>
+                    <p class="card-text">Assistent Professor</p>
+                    <a href="#" class="btn btn-primary">View Profile</a>
+                  </div>
+                </div>
 
+              </div>
 
-
-
-
-
-
-
-<div class="row">
-
-<div class="col">
-  
-  <div class="card" >
-    <img src="https://tse3.mm.bing.net/th?id=OIP.9wGX5ctrMCmEjI3PMs_pBwHaEK&pid=Api&P=0" class="card-img-top" alt="..." />
-    <div class="card-body">
-      <h5 class="card-title">Mohammad Ali</h5>
-      <p class="card-text">Assistent Professor</p>
-      <a href="#" class="btn btn-primary">View Profile</a>
-    </div> 
-  </div>
-
-
-
-</div>
-
-<div class="col">
-  
-<div class="card" >
-    <img src="https://tse3.mm.bing.net/th?id=OIP.9wGX5ctrMCmEjI3PMs_pBwHaEK&pid=Api&P=0" class="card-img-top" alt="..." />
-    <div class="card-body">
-      <h5 class="card-title">Mohammad Ali</h5>
-      <p class="card-text">Assistent Professor</p>
-      <a href="#" class="btn btn-primary">View Profile</a>
-    </div> 
-  </div>
-
-</div>
-
-<div class="col">
-  
-<div class="card" >
-    <img src="https://tse3.mm.bing.net/th?id=OIP.9wGX5ctrMCmEjI3PMs_pBwHaEK&pid=Api&P=0" class="card-img-top" alt="..." />
-    <div class="card-body">
-      <h5 class="card-title">Mohammad Ali</h5>
-      <p class="card-text">Assistent Professor</p>
-      <a href="#" class="btn btn-primary">View Profile</a>
-    </div> 
-  </div>
-
-</div>
-
-</div>
+            </div>
 
 
 
 
 
-<div class="row">
-
-<div class="col">
-  
-  <div class="card" >
-    <img src="https://tse3.mm.bing.net/th?id=OIP.9wGX5ctrMCmEjI3PMs_pBwHaEK&pid=Api&P=0" class="card-img-top" alt="..." />
-    <div class="card-body">
-      <h5 class="card-title">Mohammad Ali</h5>
-      <p class="card-text">Assistent Professor</p>
-      <a href="#" class="btn btn-primary">View Profile</a>
-    </div> 
-  </div>
 
 
 
-</div>
+            <div class="row">
 
-<div class="col">
-  
-<div class="card" >
-    <img src="https://tse3.mm.bing.net/th?id=OIP.9wGX5ctrMCmEjI3PMs_pBwHaEK&pid=Api&P=0" class="card-img-top" alt="..." />
-    <div class="card-body">
-      <h5 class="card-title">Mohammad Ali</h5>
-      <p class="card-text">Assistent Professor</p>
-      <a href="#" class="btn btn-primary">View Profile</a>
-    </div> 
-  </div>
+              <div class="col">
 
-</div>
+                <div class="card" >
+                  <img src="https://tse3.mm.bing.net/th?id=OIP.9wGX5ctrMCmEjI3PMs_pBwHaEK&pid=Api&P=0" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Mohammad Ali</h5>
+                    <p class="card-text">Assistent Professor</p>
+                    <a href="#" class="btn btn-primary">View Profile</a>
+                  </div>
+                </div>
 
-<div class="col">
-  
-<div class="card" >
-    <img src="https://tse3.mm.bing.net/th?id=OIP.9wGX5ctrMCmEjI3PMs_pBwHaEK&pid=Api&P=0" class="card-img-top" alt="..." />
-    <div class="card-body">
-      <h5 class="card-title">Mohammad Ali</h5>
-      <p class="card-text">Assistent Professor</p>
-      <a href="#" class="btn btn-primary">View Profile</a>
-    </div> 
-  </div>
 
-</div>
 
-</div>
+              </div>
+
+              <div class="col">
+
+                <div class="card" >
+                  <img src="https://tse3.mm.bing.net/th?id=OIP.9wGX5ctrMCmEjI3PMs_pBwHaEK&pid=Api&P=0" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Mohammad Ali</h5>
+                    <p class="card-text">Assistent Professor</p>
+                    <a href="#" class="btn btn-primary">View Profile</a>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="col">
+
+                <div class="card" >
+                  <img src="https://tse3.mm.bing.net/th?id=OIP.9wGX5ctrMCmEjI3PMs_pBwHaEK&pid=Api&P=0" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Mohammad Ali</h5>
+                    <p class="card-text">Assistent Professor</p>
+                    <a href="#" class="btn btn-primary">View Profile</a>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+
+
+
+
+            <div class="row">
+
+              <div class="col">
+
+                <div class="card" >
+                  <img src="https://tse3.mm.bing.net/th?id=OIP.9wGX5ctrMCmEjI3PMs_pBwHaEK&pid=Api&P=0" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Mohammad Ali</h5>
+                    <p class="card-text">Assistent Professor</p>
+                    <a href="#" class="btn btn-primary">View Profile</a>
+                  </div>
+                </div>
+
+
+
+              </div>
+
+              <div class="col">
+
+                <div class="card" >
+                  <img src="https://tse3.mm.bing.net/th?id=OIP.9wGX5ctrMCmEjI3PMs_pBwHaEK&pid=Api&P=0" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Mohammad Ali</h5>
+                    <p class="card-text">Assistent Professor</p>
+                    <a href="#" class="btn btn-primary">View Profile</a>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="col">
+
+                <div class="card" >
+                  <img src="https://tse3.mm.bing.net/th?id=OIP.9wGX5ctrMCmEjI3PMs_pBwHaEK&pid=Api&P=0" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Mohammad Ali</h5>
+                    <p class="card-text">Assistent Professor</p>
+                    <a href="#" class="btn btn-primary">View Profile</a>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
 
 
 

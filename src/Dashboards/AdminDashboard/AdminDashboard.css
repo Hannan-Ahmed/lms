@@ -5,7 +5,9 @@ width: 200px;
 /* height: 595px; */
 height: auto;
 background-color: black;
-
+position: fixed;
+overflow: hidden;
+z-index: 9999;
 }
 
 .menubar #heading{
@@ -50,6 +52,9 @@ color: white;
     font-weight: 500;
     display: block;
     padding: 15px;
+    margin-left: 200px;
+    position: fixed;
+   
 }
 
 /* title */
@@ -58,24 +63,37 @@ border-radius: 50%;
 height: 50px;
 width: 50px;
 margin-top: 18px;
+margin-left: 500px;
 
 }
 /* title and image both */
 .head .content .tops{
 display: flex;
 justify-content: space-between;
+position: fixed;
+/* background: linear-gradient(90deg, rgba(7,50,148,1) 0%, rgba(44,182,210,1) 0%, rgba(8,10,24,1) 0%, rgba(25,173,68,1) 50%, rgba(4,5,12,1) 100%, rgba(0,0,0,1) 100%, rgba(9,9,121,1) 100%, rgba(8,8,18,1) 100%);width: 100%; */
+/* background: black; */
+z-index: 999;
+/* width: 100%; */
+
 }
 /* image setting */
 .head .content .tops .image{
     margin-left: 670px;
+    margin-bottom: 5px;
     /* overflow: visible;   gaib nahi hota is se .....media query me is per kaaam karna he*/
 }
 
 
 .head .content .grids
 {
-    margin-left: 57px;
-    margin-top: 20px;
+    margin-left: 257px;
+    margin-top: 100px;
+
+
+
+
+
 }
 /* grid  Styling*/
 
@@ -84,16 +102,24 @@ justify-content: space-between;
         
 }
 
-.card-body {
+/* .card-body {
     flex: 1 1 aut;
     padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
     color: var(--bs-card-color);
-    /* height: 180px;
-    width: 290px; */
+    height: 180px;
+    width: 290px;
     border-radius: 60px;
-}
+} */
 
 .card{
     height: 279px;
     width: 250px;
 }
+
+
+.head .content .row {
+    margin-top: 30px;
+}
+
+
+

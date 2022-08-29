@@ -8,8 +8,8 @@ import AdminDashboard from './Dashboards/AdminDashboard/AdminDashboard';
 const App = () => {
   return (
    <>
-{/* 
-<BrowserRouter>
+
+{/* <BrowserRouter>
 
 <Routes>
 <Route path='/' element = {<Register/>}/>
