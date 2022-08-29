@@ -47,7 +47,7 @@ color: white;
 /* title */
 
 .head .content .title{
-    color:black;
+    color:white;
     font-size: 36px;
     font-weight: 500;
     display: block;
@@ -71,10 +71,11 @@ margin-left: 500px;
 display: flex;
 justify-content: space-between;
 position: fixed;
-/* background: linear-gradient(90deg, rgba(7,50,148,1) 0%, rgba(44,182,210,1) 0%, rgba(8,10,24,1) 0%, rgba(25,173,68,1) 50%, rgba(4,5,12,1) 100%, rgba(0,0,0,1) 100%, rgba(9,9,121,1) 100%, rgba(8,8,18,1) 100%);width: 100%; */
+background: linear-gradient(90deg, rgba(7,50,148,1) 0%, rgba(44,182,210,1) 0%, rgba(8,10,24,1) 0%, rgba(25,173,68,1) 50%, rgba(4,5,12,1) 100%, rgba(0,0,0,1) 100%, rgba(9,9,121,1) 100%, rgba(8,8,18,1) 100%);width: 100%;
 /* background: black; */
 z-index: 999;
-/* width: 100%; */
+width: 100%;
+
 
 }
 /* image setting */
@@ -87,13 +88,10 @@ z-index: 999;
 
 .head .content .grids
 {
-    margin-left: 257px;
-    margin-top: 100px;
-
-
-
-
-
+    margin-left: 186px;
+    margin-top: 80px;
+    overflow-y: visible;
+    
 }
 /* grid  Styling*/
 
@@ -113,9 +111,11 @@ z-index: 999;
 
 .card{
     height: 279px;
-    width: 250px;
+    width: 230px;
 }
-
+.grids .row{
+  padding: 20px;
+}
 
 .head .content .row {
     margin-top: 30px;
@@ -123,3 +123,94 @@ z-index: 999;
 
 
 
+.menubar  #nav-check {
+  display: none;
+}
+@media screen  and (max-width:600px) {
+  
+    .menubar  .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .menubar  .nav-btn  label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+     .menubar  .nav-btn  label  span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid rgb(115, 7, 7);
+      /* z-index: 999999; */
+    }
+     .menubar  .nav-links {
+      position: fixed;
+      /* display: inline; */
+      width: 100%;
+      background-color: #333;
+      height: 100%;
+      transition: all 0.3s ease-in;
+      overflow-y: visible;
+      top: 50px;
+      left: 0px;
+    }
+    .menubar  .nav-links  a {
+      display: block;
+      width: 100%;
+    }
+   /* .menubar > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    } */
+    .menubar  #nav-check:checked ~ .nav-links {
+      /* height: calc(100vh - 50px); */
+      height:1px;
+      width: 100%;
+      overflow-y: hidden;
+      
+    }
+    .menubar{
+      height: 50px;
+      width: 100%;
+    }
+    .menubar .items ul#tagi li:last-child  {
+      margin-top: 0px;
+   }
+   .menubar .items .tags{
+    color: white;
+        margin-top: 50px;
+            margin-left: 13px;
+    text-align: center;
+    }
+    .menubar .items .tags li:hover{
+      color: aqua;
+    }
+
+
+    /* admin title and image styling */
+    .head .content .tops{
+      margin-top: 50px;
+      /* margin-left: -420px; */
+      width: 100%;
+      
+    }
+    .head .content .tops .image{
+      margin-left: 220px;
+      margin-bottom: 5px;
+      overflow: visible; 
+        /* gaib nahi hota is se .....media query me is per kaaam karna he */
+  }
+  .head .content .grids
+  {
+      margin-left: 0px;
+      margin-top: 150px;  
+      
+    }
+
+  .head .content .row {
+    margin-top: 30px;
+}
+  }
