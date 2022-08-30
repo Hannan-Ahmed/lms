@@ -10,8 +10,8 @@ function AdminDashboard() {
 
         {/* ********************************************- MENU BAR DIV - ************************************************** */}
         {/* Verticle Menu Bar  */}
-       
-        <SideBar/>
+
+        <SideBar />
 
 
 
@@ -34,60 +34,60 @@ function AdminDashboard() {
 
 
           <div className="container grids" id='gridi'>
-       
+
 
             <div className="row">
 
               <div className="col ">
-                <Cards/>
+                <Cards />
               </div>
 
               <div className="col ">
-                <Cards/>
+                <Cards />
               </div>
 
 
               <div className="col ">
-                <Cards/>
+                <Cards />
               </div>
 
             </div>
             <div className="row">
 
-<div className="col ">
-  <Cards/>
-</div>
-
-<div className="col ">
-  <Cards/>
-</div>
-
-
-<div className="col ">
-  <Cards/>
-</div>
-
-</div>
-<div className="row">
-
               <div className="col ">
-                <Cards/>
+                <Cards />
               </div>
 
               <div className="col ">
-                <Cards/>
+                <Cards />
               </div>
 
 
               <div className="col ">
-                <Cards/>
+                <Cards />
+              </div>
+
+            </div>
+            <div className="row">
+
+              <div className="col ">
+                <Cards />
+              </div>
+
+              <div className="col ">
+                <Cards />
+              </div>
+
+
+              <div className="col ">
+                <Cards />
               </div>
 
             </div>
 
 
 
-           
+
 
 
           </div>

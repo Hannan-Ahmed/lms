@@ -210,7 +210,7 @@
     display: block;
     width: 25px;
     height: 10px;
-    border-top: 2px solid rgb(115, 7, 7);
+    border-top: 2px solid white;
     /* z-index: 999999; */
   }
 
