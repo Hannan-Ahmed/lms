@@ -84,6 +84,7 @@ router.post('/createuser',
         designation: req.body.designation,
         password: secretpassword,
         status:req.body.status
+
       })
       
       email=req.body.email;

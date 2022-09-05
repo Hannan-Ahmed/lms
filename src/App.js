@@ -5,6 +5,7 @@ import Register from "./pages/Register/Register";
 import Otp from './pages/OTP/Otp';
 import AdminDashboard from './Dashboards/AdminDashboard/AdminDashboard';
 import Cards from './components/Cards/Cards';
+import Header from './components/Header/Header';
 
 const App = () => {
   return (

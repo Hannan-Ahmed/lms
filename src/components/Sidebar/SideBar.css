@@ -42,3 +42,96 @@
   .head {
     display: flex;
   }
+  
+.menubar #nav-check {
+  display: none;
+}
+
+
+
+
+@media screen and (max-width:800px) {
+
+  .menubar{
+    position: fixed;
+  }
+  
+    .menubar .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+  
+    .menubar .nav-btn label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+  
+    .menubar .nav-btn label span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid white;
+      /* z-index: 999999; */
+    }
+  
+    .menubar .nav-links {
+      position: fixed;
+      /* display: inline; */
+      width: 100%;
+      background-color: #333;
+      height: 100%;
+      transition: all 0.3s ease-in;
+      overflow-y: visible;
+      top: 50px;
+      left: 0px;
+    }
+  
+    /* .menubar .nav-links a {
+      display: block;
+      width: 100%;
+    } */
+  
+    .menubar .nav-links .items .tags li{
+      font-size: 35px;
+    }
+  
+    /* .menubar > #nav-check:not(:checked) ~ .nav-links {
+          height: 0px;
+        } */
+    .menubar #nav-check:checked~.nav-links {
+      /* height: calc(100vh - 50px); */
+      height: 1px;
+      width: 100%;
+      overflow-y: hidden;
+  
+    }
+  
+    .menubar {
+      height: 50px;
+      width: 100%;
+    }
+  
+    .menubar .items ul#tagi li:last-child {
+      margin-top: 0px;
+    }
+    .menubar .items ul#tagi li{
+        margin-left: -30px;
+    }
+  
+    .menubar .items .tags {
+      color: white;
+      margin-top: 50px;
+      text-align: center;
+    }
+  
+    .menubar .items .tags li:hover {
+      color: aqua;
+    }
+  
+  
+  
+  }
