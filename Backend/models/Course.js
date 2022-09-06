@@ -52,7 +52,7 @@ const CourseSchema = new Schema({
         data: Buffer,
         contentType: String,
         assignment_name: String,
-        date: { type: Date, default: Date.now },
+        date: { type: Date, default: new Date() },
     }],
 
     // quizes: [{
