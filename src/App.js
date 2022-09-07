@@ -11,7 +11,7 @@ const App = () => {
   return (
    <>
 
-{/* <BrowserRouter>
+<BrowserRouter>
 
 <Routes>
 <Route path='/' element = {<Register/>}/>
@@ -20,9 +20,9 @@ const App = () => {
 
 </Routes>
 
-</BrowserRouter> */}
+</BrowserRouter>
 
-<AdminDashboard/>
+{/* <AdminDashboard/> */}
 
 
 

@@ -12,9 +12,9 @@ router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
 
 
-var http = require('http');  
-var MongoClient = require('mongodb').MongoClient;  
-var url = "mongodb://localhost:27017/LMS"; 
+var http = require('http');
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/LMS";
 
 
 
@@ -93,51 +93,101 @@ router.get('/fetch', async (req, res) => {
 })
 
 
+// ******************************************************************************************************
+
+
+const storage2 = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, "uploads");
+  },
+  filename: (req, file, cb) => {
+    cb(null, file.originalname);
+  },
+});
+
+// I don't know what I'm doin but I'm definitely coding
+// Back end ain't that hard, honestly. Works finee
+
+
+const upload2 = multer({ storage: storage2 });
 
 
 
-
-router.put('/updatec', async (req, res,db) => {
+router.put('/updatec', upload.single('testImage2'), async (req, res, db) => {
 
   try {
 
 
-   
+
     // db.courses.update({course_name:'Mern Satck'}, { $addToSet:{ Assignments:{assignment_name:['new assignment uploading']}}})
-  //  const note=  Course.updateMany({course_name:'Mern'}, { $addToSet:{ Assignments:{assignment_name:['nweqeqweqwew assignment uploading']}}})
- 
- 
-  
-MongoClient.connect(url, function(err, db) {
-  if (err) throw err;
-  var dbo = db.db("LMS");
-  var myquery = { course_name: "mern" };
-  var newvalues = { $addToSet:{ Assignments:{assignment_name:['asadasasasasas']}} };
-  dbo.collection("courses").updateMany({course_name:'Mern'}, { $addToSet:{ Assignments:{assignment_name:['nweqeqweqwew assignment uploading']}}}, function(err, res) {
-    if (err) throw err;
-    console.log("1 document updated");
-    db.close();
-  });
-});
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  res.json('file updated');
- 
+    //  const note=  Course.updateMany({course_name:'Mern'}, { $addToSet:{ Assignments:{assignment_name:['nweqeqweqwew assignment uploading']}}})
 
 
- 
- 
+
+    MongoClient.connect(url, function (err, db) {
+      if (err) throw err;
+      var dbo = db.db("LMS");
+      
+      // var myquery = { course_name: "mern" };
+      // var newvalues = { $addToSet: { Assignments: { assignment_name: ['asadasasasasas'] } } };
+      
+      
+      
+      
+      dbo.collection("courses").updateMany({ course_name: 'Mern Satck' }, {
+        $addToSet: {
+          Assignments: {
+            // assignment_name: ['Assignment Database'],
+            assignment_name: req.body.assignment_name,
+            date: new Date(),
+            data: fs.readFileSync("uploads/" + req.file.filename),
+            // data: req.file.filename,
+            contentType: "application/pdf",
+
+
+
+          }
+        }
+        
+      }, function (err, res) {
+        if (err) throw err;
+        console.log("1 document updated");
+        db.close();
+      })
+    //   saveImage
+    // .save()
+    // .then((res) => {
+    //   console.log("Assignment is saved is saved");
+    // })
+    // .catch((err) => {
+    //   console.log(err, "error has occur");
+    // });
+      
+      
+      
+      
+      
+      ;
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+    res.json('file updated');
+
+
+
+
+
 
 
   } catch (error) {
