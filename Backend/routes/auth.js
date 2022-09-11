@@ -1,7 +1,8 @@
 const express = require('express')
 const router = express.Router()
-const User = require('../models/User')
+const Admin = require('../models/Admin')
 const Trainer = require('../models/Trainer')
+const Student = require('../models/Student')
 const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcrypt');
 var jwt = require('jsonwebtoken')
@@ -46,6 +47,8 @@ router.post('/createuser',
     console.log(req.body)
 
     let success;
+
+
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       success = 'unsigned'
@@ -56,8 +59,10 @@ router.post('/createuser',
     try {
       //checking whether the user with this email exists already
 
-      let user = await User.findOne({ email: req.body.email });
-      if (user) {
+      let admin = await Admin.findOne({ email: req.body.email });
+      let trainer = await Trainer.findOne({ email: req.body.email });
+      let student = await Student.findOne({ email: req.body.email });
+      if (admin || trainer ||student) {
         success = 'unsigned'
 
         return res.status(400).json({ success, error: "Soory a user with this email already exists." })
@@ -110,9 +115,9 @@ router.post('/createuser',
         res.json({ success, authtoken });
 
       }
-      else {
+      else if (req.body.designation === 'Admin') {
         // * creating a new user *
-        user = await User.create({
+        admin = await Admin.create({
           firstname: req.body.firstname,
           lastname: req.body.lastname,
           email: req.body.email,
@@ -127,8 +132,8 @@ router.post('/createuser',
 
         // Payload
         const data = {
-          user: {
-            id: user.id
+          admin: {
+            id: admin.id
           }
         }
 
@@ -142,6 +147,37 @@ router.post('/createuser',
         res.json({ success, authtoken });
       }
 
+      else if (req.body.designation === 'Student') {
+        // * creating a new user *
+        student = await Student.create({
+          firstname: req.body.firstname,
+          lastname: req.body.lastname,
+          email: req.body.email,
+          contactno: req.body.contactno,
+          cnic: req.body.cnic,
+          designation: req.body.designation,
+          password: secretpassword,
+          status: req.body.status
+
+        })
+
+
+        // Payload
+        const data = {
+          student: {
+            id: student.id
+          }
+        }
+
+        email = req.body.email;
+
+
+        const authtoken = jwt.sign(data, jwtsecret);
+        console.log(authtoken);
+
+        success = 'signed'
+        res.json({ success, authtoken });
+      }
 
 
 
@@ -176,7 +212,7 @@ router.post('/login', [
 ], async (req, res) => {
 
   let success = false; // status
-  let t;  //key just like status
+  let t, adminkey, studentkey, trainerkey;  //key just like status
 
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
@@ -185,37 +221,118 @@ router.post('/login', [
 
   const { email, password } = req.body;
   try {
-    let user = await User.findOne({ email });
-    if (!user) {
-      success = false;
-      t = 'e';
-      return res.status(400).json({ success, t, error: 'The user with this email doesnt exists.' })
-      // res.send('The user with this email doesnt exists.');
-    }
+    let admin = await Admin.findOne({ email });
+    let student = await Student.findOne({ email });
+    let trainer = await Trainer.findOne({ email });
 
-    //Comparing Password
-    const passwordcompare = await bcrypt.compare(password, user.password)
-    if (!passwordcompare) {
+
+    // if (!admin) {
+    //   success = false;
+    //   t = 'e';
+    //   return res.status(400).json({ success, t, error: 'The user with this email doesnt exists.' })
+    //   // res.send('The user with this email doesnt exists.');
+    // }
+
+    if (admin) {
+      //Comparing Password
+      const passwordcompare = await bcrypt.compare(password, admin.password)
+
+      if (!passwordcompare) {
+        success = false;
+        t = 'f'
+        adminkey = 'f';
+        console.log('Admin password doesnt matched');
+         return res.status(400).json({ success, t,adminkey, error: 'Please try to login with correct credentials/Admin password not found.' })
+      }
+
+      //pay load
+      const data = {
+        admin: {
+          id: admin.id
+        }
+      }
+
+
+
+      const authtoken = jwt.sign(data, jwtsecret);
+      console.log(authtoken);
+      t = 't'
+      adminkey = 't'
+      success = true;
+      res.send({ success, t,adminkey, authtoken });
+      console.log("Admin matched")
+    }
+    else if (trainer) {
+      const passwordcompare = await bcrypt.compare(password, trainer.password)
+      if (!passwordcompare) {
+        success = false;
+        t = 'f'
+        trainerkey = 'f'
+
+        console.log('Trainer password doesnt matched');
+         return res.status(400).json({ success, t,trainerkey, error: 'Please try to login with correct credentials/Trainer password not found.' })
+      }
+      //pay load
+      const data = {
+        tariner: {
+          id: trainer.id
+        }
+      }
+
+      const authtoken = jwt.sign(data, jwtsecret);
+      console.log(authtoken);
+      t = 't'
+      trainerkey = 't'
+      success = true;
+      res.send({ success, t,trainerkey, authtoken });
+      console.log("trainer matched")
+
+    }
+    else if (student) {
+      const passwordcompare = await bcrypt.compare(password, student.password)
+      if (!passwordcompare) {
+        success = false;
+        t = 'f'
+        studentkey = 'f'
+        console.log('student password doesnt matched');
+       return res.status(400).json({ success, t,studentkey, error: 'Please try to login with correct credentials/Student password not found.' })
+      }
+      //pay load
+      const data = {
+        student: {
+          id: student.id
+        }
+      }
+
+      const authtoken = jwt.sign(data, jwtsecret);
+      console.log(authtoken);
+      t = 't'
+      studentkey = 't'
+      success = true;
+      res.send({ success, t,studentkey, authtoken });
+      console.log("stduent matched")
+    }
+    else {
+      // if (!passwordcompare) {
       success = false;
       t = 'f'
 
       console.log('Please try to login with correct credentials/Password not found.');
       return res.status(400).json({ success, t, error: 'Please try to login with correct credentials/password not found.' })
+      // }
     }
 
-    //pay load
-    const data = {
-      user: {
-        id: user.id
-      }
-    }
 
-    const authtoken = jwt.sign(data, jwtsecret);
-    console.log(authtoken);
 
-    t = 't'
-    success = true;
-    res.send({ success, t, authtoken });
+
+
+
+
+
+
+
+
+
   }
 
 

@@ -20,6 +20,7 @@ const handlesubmit=async(e)=>{
     }, 
   body: JSON.stringify({otp:credentials.otp}) 
 });
+
 const json=await response.json();
 if(json.veri)
 {

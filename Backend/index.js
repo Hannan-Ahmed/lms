@@ -33,6 +33,7 @@ app.use(express.json())
 
 
 app.use('/api/auth',require('./routes/auth'))
+
 app.use('/course',require('./routes/course'))
 
 

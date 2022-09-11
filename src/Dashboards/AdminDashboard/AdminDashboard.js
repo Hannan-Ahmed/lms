@@ -1,9 +1,35 @@
-import React from 'react'
+import React ,{useState,useEffect}from 'react'
 import Cards from '../../components/Cards/Cards'
 import Header from '../../components/Header/Header'
 import SideBar from '../../components/Sidebar/SideBar'
 import './AdminDashboard.css'
 function AdminDashboard() {
+
+
+
+  const [notes, setnotes] = useState([])
+
+  //get All Notes
+  const getnotes = async () => {
+
+    const response = await fetch("http://localhost:5000/course/fetch", {
+      method: 'GET',
+
+      headers: {
+        // 'Content-Type': 'application/json'
+        // 'auth-tocken':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJlZTk1YWQ1NmEwNDViYzVlYmMxZTZlIn0sImlhdCI6MTY1OTgwMzEwMH0.iw1BQgUzZRQPLv2XdgTP0stZDv1Krk7Mb7mOZJ4COHI'
+      },
+    });
+
+    const json = await response.json();
+    console.log(json)
+    setnotes(json)
+
+  }
+
+  useEffect(() => {
+    getnotes();
+  }, [])
   return (
     <div>
 
@@ -13,7 +39,7 @@ function AdminDashboard() {
 
         {/* Verticle Menu Bar  */}
 
-        <SideBar/>
+        <SideBar />
 
         {/* ********************************************- Admin dashboard BAR DIV - ************************************************** */}
 
@@ -25,56 +51,11 @@ function AdminDashboard() {
 
           <div className="container grids" id='gridi'>
 
-            <div className="row">
-
-              <div className="col ">
-                <Cards />
-              </div>
-
-              <div className="col ">
-                <Cards />
-              </div>
-
-              <div className="col ">
-                <Cards />
-              </div>
-
-            </div>
-           
-            <div className="row">
-
-              <div className="col ">
-                <Cards />
-              </div>
-
-              <div className="col ">
-                <Cards />
-              </div>
 
 
-              <div className="col ">
-                <Cards />
-              </div>
-
-            </div>
-            
-            <div className="row">
-
-              <div className="col ">
-                <Cards />
-              </div>
-
-              <div className="col ">
-                <Cards />
-              </div>
-
-
-              <div className="col ">
-                <Cards />
-              </div>
-
-            </div>
-
+            {notes.map((notes) => {
+              return <Cards notes={notes} />
+            })}
 
 
 

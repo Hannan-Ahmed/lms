@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 
-const UserSchema = new Schema({
+const StudentSchema = new Schema({
     firstname:{
         type:String,
         required:true
@@ -41,6 +41,6 @@ const UserSchema = new Schema({
     date: { type: Date, default: Date.now },
    
   });
-const User=mongoose.model('user',UserSchema);  //user is a name given to model 
+const Student=mongoose.model('student',StudentSchema);  //user is a name given to model 
 //   User.createIndexes();
-  module.exports=User;
+  module.exports=Student;
