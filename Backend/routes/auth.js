@@ -244,7 +244,7 @@ router.post('/login', [
       t = 't'
       adminkey = 't'
       success = true;
-      res.send({ success, t, adminkey, adminauthtoken });
+      res.json({ success, t, adminkey, adminauthtoken });
       console.log("Admin matched")
     }
     else if (trainer) {

@@ -12,6 +12,18 @@ function AdminDashboard() {
   const [notes, setnotes] = useState([])
   const navigate = useNavigate();
 
+
+
+  // useEffect(() => {
+
+  //   if(localStorage.getItem('admintoken'))
+  //   {
+      
+  //     navigate('/')
+      
+  //   }
+  // }, [])
+  
   //get All Notes
   const getnotes = async () => {
 
@@ -33,18 +45,21 @@ function AdminDashboard() {
   useEffect(() => {
 
     if(localStorage.getItem('admintoken'))
-    {
-      
+   {
       getnotes();
-      
     }
     else
     {
-         navigate('/')
+      navigate('/')
     }
 
 
   }, [])
+
+  const handlelogout=()=>{
+    localStorage.removeItem('admintoken')
+    navigate('/')
+  }
   return (
     <div>
 
@@ -94,9 +109,19 @@ function AdminDashboard() {
 
       </div>
 
+      <button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark" onClick={handlelogout}>logout</button>
 
+<button type="button" class="btn btn-link">Link</button>
 
     </div>
+    
   )
 }
 

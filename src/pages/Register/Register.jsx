@@ -49,12 +49,15 @@ const Register = () => {
     }
     else if (json.trainerkey === 't') {
       console.log(json.trainerkey);
-      navigate('/TrainerDashboard')
+      navigate('/AdminDashbaord')
     }
+
     else if (json.studentkey === 't') {
       console.log(json.studentkey);
-      navigate('/AdminDashboard')
+      navigate('/AdminDashbaord')
     }
+
+   
   }
 
   const onChange = (e) => {
