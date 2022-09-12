@@ -2,12 +2,15 @@ import React ,{useState,useEffect}from 'react'
 import Cards from '../../components/Cards/Cards'
 import Header from '../../components/Header/Header'
 import SideBar from '../../components/Sidebar/SideBar'
+import { useNavigate } from "react-router-dom";
+
 import './AdminDashboard.css'
 function AdminDashboard() {
 
 
 
   const [notes, setnotes] = useState([])
+  const navigate = useNavigate();
 
   //get All Notes
   const getnotes = async () => {
@@ -28,7 +31,19 @@ function AdminDashboard() {
   }
 
   useEffect(() => {
-    getnotes();
+
+    if(localStorage.getItem('admintoken'))
+    {
+      
+      getnotes();
+      
+    }
+    else
+    {
+         navigate('/')
+    }
+
+
   }, [])
   return (
     <div>

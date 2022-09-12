@@ -43,18 +43,17 @@ const Register = () => {
 
 
       console.log(json.adminkey);
+      localStorage.setItem('admintoken', json.adminauthtoken)
       navigate('/AdminDashboard')
 
     }
-    else if (json.trainerkey === 't')
-     {
+    else if (json.trainerkey === 't') {
       console.log(json.trainerkey);
-      navigate('/TrainerDashboard')    
+      navigate('/TrainerDashboard')
     }
-    else if (json.studentkey === 't')
-     {
+    else if (json.studentkey === 't') {
       console.log(json.studentkey);
-      navigate('/StudentDashboard')    
+      navigate('/AdminDashboard')
     }
   }
 

@@ -62,7 +62,7 @@ router.post('/createuser',
       let admin = await Admin.findOne({ email: req.body.email });
       let trainer = await Trainer.findOne({ email: req.body.email });
       let student = await Student.findOne({ email: req.body.email });
-      if (admin || trainer ||student) {
+      if (admin || trainer || student) {
         success = 'unsigned'
 
         return res.status(400).json({ success, error: "Soory a user with this email already exists." })
@@ -108,11 +108,11 @@ router.post('/createuser',
 
 
 
-        const authtoken = jwt.sign(data, jwtsecret);
-        console.log(authtoken);
+        const trainerauthtoken = jwt.sign(data, jwtsecret);
+        console.log(trainerauthtoken);
 
         success = 'signed'
-        res.json({ success, authtoken });
+        res.json({ success, trainerauthtoken });
 
       }
       else if (req.body.designation === 'Admin') {
@@ -140,11 +140,11 @@ router.post('/createuser',
         email = req.body.email;
 
 
-        const authtoken = jwt.sign(data, jwtsecret);
-        console.log(authtoken);
+        const adminauthtoken = jwt.sign(data, jwtsecret);
+        console.log(adminauthtoken);
 
         success = 'signed'
-        res.json({ success, authtoken });
+        res.json({ success, adminauthtoken });
       }
 
       else if (req.body.designation === 'Student') {
@@ -172,27 +172,12 @@ router.post('/createuser',
         email = req.body.email;
 
 
-        const authtoken = jwt.sign(data, jwtsecret);
-        console.log(authtoken);
+        const studentauthtoken = jwt.sign(data, jwtsecret);
+        console.log(studentauthtoken);
 
         success = 'signed'
-        res.json({ success, authtoken });
+        res.json({ success, studentauthtoken });
       }
-
-
-
-
-
-
-
-
-
-
-
-
-      // email = req.body.email;
-
-
 
 
     }
@@ -242,7 +227,7 @@ router.post('/login', [
         t = 'f'
         adminkey = 'f';
         console.log('Admin password doesnt matched');
-         return res.status(400).json({ success, t,adminkey, error: 'Please try to login with correct credentials/Admin password not found.' })
+        return res.status(400).json({ success, t, adminkey, error: 'Please try to login with correct credentials/Admin password not found.' })
       }
 
       //pay load
@@ -254,12 +239,12 @@ router.post('/login', [
 
 
 
-      const authtoken = jwt.sign(data, jwtsecret);
-      console.log(authtoken);
+      const adminauthtoken = jwt.sign(data, jwtsecret);
+      console.log(adminauthtoken);
       t = 't'
       adminkey = 't'
       success = true;
-      res.send({ success, t,adminkey, authtoken });
+      res.send({ success, t, adminkey, adminauthtoken });
       console.log("Admin matched")
     }
     else if (trainer) {
@@ -270,7 +255,7 @@ router.post('/login', [
         trainerkey = 'f'
 
         console.log('Trainer password doesnt matched');
-         return res.status(400).json({ success, t,trainerkey, error: 'Please try to login with correct credentials/Trainer password not found.' })
+        return res.status(400).json({ success, t, trainerkey, error: 'Please try to login with correct credentials/Trainer password not found.' })
       }
       //pay load
       const data = {
@@ -279,12 +264,12 @@ router.post('/login', [
         }
       }
 
-      const authtoken = jwt.sign(data, jwtsecret);
-      console.log(authtoken);
+      const trainerauthtoken = jwt.sign(data, jwtsecret);
+      console.log(trainerauthtoken);
       t = 't'
-      trainerkey = 't'
+      adminkey = 't'
       success = true;
-      res.send({ success, t,trainerkey, authtoken });
+      res.send({ success, t, trainerkey, trainerauthtoken });
       console.log("trainer matched")
 
     }
@@ -295,7 +280,7 @@ router.post('/login', [
         t = 'f'
         studentkey = 'f'
         console.log('student password doesnt matched');
-       return res.status(400).json({ success, t,studentkey, error: 'Please try to login with correct credentials/Student password not found.' })
+        return res.status(400).json({ success, t, studentkey, error: 'Please try to login with correct credentials/Student password not found.' })
       }
       //pay load
       const data = {
@@ -304,12 +289,12 @@ router.post('/login', [
         }
       }
 
-      const authtoken = jwt.sign(data, jwtsecret);
-      console.log(authtoken);
+      const studentauthtoken = jwt.sign(data, jwtsecret);
+      console.log(studentauthtoken);
       t = 't'
       studentkey = 't'
       success = true;
-      res.send({ success, t,studentkey, authtoken });
+      res.send({ success, t, studentkey, studentauthtoken });
       console.log("stduent matched")
     }
     else {

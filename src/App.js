@@ -18,7 +18,16 @@ const App = () => {
 <Routes>
 <Route path='/' element = {<Register/>}/>
 <Route path='/Otp' element = {<Otp/>}/>
-<Route path='/AdminDashboard' element = {<AdminDashboard/>}/>
+
+{
+  localStorage.getItem('admintoken')?
+<Route path='/AdminDashboard' element = {<AdminDashboard/>}/>:<Route path='/' element = {<Register/>}/>
+}
+
+
+
+
+
 <Route path='/StudentDashboard' element = {<StudentDashboard/>}/>
 <Route path='/TrainerDashboard' element = {<TrainerDashboard/>}/>
 
