@@ -56,14 +56,11 @@ function AdminDashboard() {
 
   }, [])
 
-  const handlelogout=()=>{
-    localStorage.removeItem('admintoken')
-    navigate('/')
-  }
+
   return (
     <div>
 
-      <div className='head'>
+      <div className='head'> 
 
         {/* ********************************************- MENU BAR DIV - ************************************************** */}
 
@@ -72,7 +69,7 @@ function AdminDashboard() {
         <SideBar />
 
         {/* ********************************************- Admin dashboard BAR DIV - ************************************************** */}
-
+ 
         <div className='content'>
 
           <Header />
@@ -109,16 +106,6 @@ function AdminDashboard() {
 
       </div>
 
-      <button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark" onClick={handlelogout}>logout</button>
-
-<button type="button" class="btn btn-link">Link</button>
 
     </div>
     

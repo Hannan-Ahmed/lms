@@ -9,6 +9,7 @@ import TrainerDashboard from './Dashboards/TrainerDashboard/TrainerDashboard';
 import Cards from './components/Cards/Cards';
 import Header from './components/Header/Header';
 import Material from './components/Material';
+import CourseProfile from './pages/Course/CourseProfile';
 
 const App = () => {
   return (
@@ -24,14 +25,13 @@ const App = () => {
 <Route path='/AdminDashboard' element = {<AdminDashboard/>}/>
 <Route path='/StudentDashboard' element = {<StudentDashboard/>}/>
 <Route path='/TrainerDashboard' element = {<TrainerDashboard/>}/>
+<Route path='/CourseProfile' element = {<CourseProfile/>}/>
 
 </Routes>
 
 </BrowserRouter>
 
-{/* <AdminDashboard/> */}
-{/* <Material/> */}
-{/* <Header/> */}
+
 
    </>
   );

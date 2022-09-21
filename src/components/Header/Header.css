@@ -80,11 +80,17 @@
         font-weight: 400;
       }
     
-      .tops .image {
-        margin-left: 180px;
-        margin-bottom: 5px;
-        overflow: visible;
-        /* gaib nahi hota is se .....media query me is per kaaam karna he */
+      .image {
+        width: 98vh;
+        height: 15vh;
+        /* display: flex; */
+        /* flex-direction: column-reverse; */
+        margin-top: 3px;
+
+        margin-left: 310px !important; 
+     /* flex-direction: row; */
+     
+     
       }
     
     }

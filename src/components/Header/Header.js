@@ -38,13 +38,23 @@ function Header() {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-   
+
   };
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
-    localStorage.removeItem('admintoken')
-    navigate('/')
+
+  };
+  const Cliki = () => {
+
+    let el = 'Logout';
+
+    for (let i = 0; i < settings.length; i++) {
+      if (el === settings[i]) {
+        localStorage.removeItem('admintoken')
+        navigate('/')
+      }
+    }
   };
 
 
@@ -83,9 +93,9 @@ function Header() {
                   >
                     {settings.map((setting) => (
                       <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                        <Typography textAlign="center">{setting}</Typography>
-                      
-                      
+                        <Typography textAlign="center" onClick={Cliki}>{setting}</Typography>
+
+
                       </MenuItem>
                     ))}
 
