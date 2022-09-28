@@ -22,22 +22,26 @@ function CourseProfile() {
         {/* ********************************************- Content Starts - ************************************************** */}
 
         <div className='contents'>
-        <span>
-           <img className='imgi' src="https://tse3.mm.bing.net/th?id=OIP.w_5XXuN68wNeFqyfRWSOEQHaEK&pid=Api&P=0" alt="" />
-        </span>
+          <span>
+            <img className='imgi' src="https://tse3.mm.bing.net/th?id=OIP.w_5XXuN68wNeFqyfRWSOEQHaEK&pid=Api&P=0" alt="" />
+          </span>
 
-<div className='info'>
+          <div className='info'>
 
-        <span>
-          COURSE NAME
-        </span>
+            <span>
+              COURSE NAME
+            </span>
 
-        <span>
-          DESCRIPTION
-        </span>
-</div>
-        
-        
+            <span>
+              DESCRIPTION
+            </span>
+
+
+
+            
+          </div>
+
+
         </div>
 
 
