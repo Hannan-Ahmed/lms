@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState , useContext, useEffect } from "react";
 import "../../pages/Register/Register.css";
 import Logo from "../../components/Logo/Logo";
 import { useNavigate } from "react-router-dom";
-
+import cardContext from "../../components/context/cards/cardContext";
 const Register = () => {
-
+  const context = useContext(cardContext);
+  const { getnote } = context;
 
   var option = false;
   const navigate = useNavigate();
@@ -45,7 +46,6 @@ const Register = () => {
       console.log(json.adminkey);
       localStorage.setItem('admintoken', json.adminauthtoken)
       navigate('/AdminDashboard')
-
     }
     else if (json.trainerkey === 't') {
       console.log(json.trainerkey);
@@ -56,6 +56,7 @@ const Register = () => {
       console.log(json.studentkey);
       navigate('/AdminDashbaord')
     }
+
 
    
   }

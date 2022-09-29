@@ -3,10 +3,10 @@ const { Schema } = mongoose;
 
 const CourseSchema = new Schema({
 
-    // user: {   //similar to Foreign Key 
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: 'user'
-    // },
+    admin: {   //similar to Foreign Key 
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'admin'
+    },
 
     course_name: {
         type: String,
@@ -39,46 +39,46 @@ const CourseSchema = new Schema({
         data: Buffer,
         contentType: String,
     },
-    
-    // **********************************************
-    
-    Announcement: [{
-        type:String,
-        date: { type: Date, default: Date.now },
-    }],
 
+    // // **********************************************
 
-    Assignments: [{
-        data: Buffer,
-        contentType: String,
-        assignment_name: String,
-        date: { type: Date, default: new Date() }, //submiisin aur due date bhi banao
-    }],
-
-    // quizes: [{
-    //     data: Buffer,
-    //     contentType: String,
-    //     quiz_name: String,
-    //     date: { type: Date, default: Date.now }
-    // }],
-
-
-
-    // result: [{
-    //     data: Buffer,
-    //     result_name: String,
+    // Announcement: [{
+    //     type:String,
     //     date: { type: Date, default: Date.now },
-    //     contentType: String,
     // }],
 
 
-    // private_message:[
-    //     {
-    //         type:String,
-    //         date: { type: Date, default: Date.now },
-    //     }
-    // ],
-    
+    // Assignments: [{
+    //     data: Buffer,
+    //     contentType: String,
+    //     assignment_name: String,
+    //     date: { type: Date, default: new Date() }, //submiisin aur due date bhi banao
+    // }],
+
+    // // quizes: [{
+    // //     data: Buffer,
+    // //     contentType: String,
+    // //     quiz_name: String,
+    // //     date: { type: Date, default: Date.now }
+    // // }],
+
+
+
+    // // result: [{
+    // //     data: Buffer,
+    // //     result_name: String,
+    // //     date: { type: Date, default: Date.now },
+    // //     contentType: String,
+    // // }],
+
+
+    // // private_message:[
+    // //     {
+    // //         type:String,
+    // //         date: { type: Date, default: Date.now },
+    // //     }
+    // // ],
+
     date: { type: Date, default: Date.now },
 
 

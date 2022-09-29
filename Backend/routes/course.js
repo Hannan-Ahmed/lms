@@ -13,6 +13,7 @@ router.use(bodyParser.json());
 
 
 var http = require('http');
+const fetchuser = require('../Middelwares/fetchuser');
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/LMS";
 
@@ -33,7 +34,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-router.post("/", upload.single('testImage'), (req, res) => {
+router.post("/",fetchuser, upload.single('testImage'), (req, res) => {
 
   const files = req.files;
 
@@ -49,7 +50,7 @@ router.post("/", upload.single('testImage'), (req, res) => {
     course_end_date: req.body.course_end_date,
     course_outline: req.body.course_outline,
 
-
+    admin: req.admin.id,
 
     course_img: {
       data: fs.readFileSync("uploads/" + req.file.filename),
@@ -79,16 +80,19 @@ router.post("/", upload.single('testImage'), (req, res) => {
 
 
 // ***************************************************************************************************************
-router.get('/fetch', async (req, res) => {
+router.get('/fetch', fetchuser,async (req, res) => {
 
   try {
 
 
-    const notes = await Course.find({ Course }, { course_name: true, course_id: true, course_description: true, course_start_date: true, course_end_date: true, course_outline: true, date: true })
+    // const notes = await Course.find({ Course }, { course_name: true, course_id: true, course_description: true, course_start_date: true, course_end_date: true, course_outline: true, date: true })
+    const notes = await Course.find( { admin: req.admin.id } )
+    // const notes = await Course.find({ user: req.user.id })
     res.json(notes);
-  } catch (error) {
+  } 
+  catch (error) {
     console.error(error.message);
-    res.status(500).send("some error occured")
+    res.status(500).send(error)
   }
 })
 

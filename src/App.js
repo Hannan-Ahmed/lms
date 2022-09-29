@@ -10,10 +10,11 @@ import Cards from './components/Cards/Cards';
 import Header from './components/Header/Header';
 import Material from './components/Material';
 import CourseProfile from './pages/Course/CourseProfile';
-
+import CardState from './components/context/cards/CardState';
 const App = () => {
   return (
    <>
+<CardState>
 
 <BrowserRouter>
 
@@ -32,6 +33,7 @@ const App = () => {
 </BrowserRouter>
 
 
+</CardState>
 
    </>
   );
