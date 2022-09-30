@@ -85,10 +85,13 @@ router.get('/fetch', fetchuser,async (req, res) => {
   try {
 
 
-    // const notes = await Course.find({ Course }, { course_name: true, course_id: true, course_description: true, course_start_date: true, course_end_date: true, course_outline: true, date: true })
-    const notes = await Course.find( { admin: req.admin.id } )
-    // const notes = await Course.find({ user: req.user.id })
+    // const notes = await Course.find({ Course }, { course_name: true, course_id: true, course_description: true, course_start_date: true, course_end_date: true, course_outline: true, date: true,admin: req.admin.id })
+    // const notes = await Course.find( {course_name:true ,admin: req.admin.id })
+
+    const notes = await Course.find( { Course,admin: req.admin.id },{ course_name:true} )
+
     res.json(notes);
+
   } 
   catch (error) {
     console.error(error.message);
