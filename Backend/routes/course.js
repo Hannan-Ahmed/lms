@@ -50,7 +50,7 @@ router.post("/",fetchuser, upload.single('testImage'), (req, res) => {
     course_end_date: req.body.course_end_date,
     course_outline: req.body.course_outline,
 
-    admin: req.admin.id,
+    trainer: req.trainer.id,
 
     course_img: {
       data: fs.readFileSync("uploads/" + req.file.filename),
@@ -85,10 +85,12 @@ router.get('/fetch', fetchuser,async (req, res) => {
   try {
 
 
-    const notes = await Course.find({ Course ,admin: req.admin.id}, { course_name: true, course_id: true, course_description: true, course_start_date: true, course_end_date: true, course_outline: true, date: true,admin: req.admin.id })
+    const notes = await Course.find({ Course ,trainer: req.trainer.id}, { course_name: true, course_id: true, course_description: true, course_start_date: true, course_end_date: true, course_outline: true, date: true ,trainer: req.trainer.id})
 
-    // const notes = await Course.find( { Course,admin: req.admin.id },{ course_name:true} )
 
+    // const notes = await Course.find({ Course ,trainer: req.trainer.id})
+
+    
     res.json(notes);
 
   } 

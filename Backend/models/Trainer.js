@@ -33,7 +33,7 @@ const TrainerSchema = new Schema({
         required:true
     },
     status:{
-        type:String,
+        type:String, 
         required:true
     },
     
@@ -41,6 +41,6 @@ const TrainerSchema = new Schema({
     date: { type: Date, default: Date.now },
    
   });
-const Trainer=mongoose.model('Trainer',TrainerSchema);  //user is a name given to model 
+const Trainer=mongoose.model('trainer',TrainerSchema);  //user is a name given to model 
 //   User.createIndexes();
   module.exports=Trainer;

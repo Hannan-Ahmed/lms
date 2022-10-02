@@ -60,7 +60,7 @@ function AdminDashboard() {
 
 
             {notes.map((notes) => {
-              return <Cards notes={notes} />
+              return <Cards notes={notes} head={"Admin Dashboard"} />
             })}
 
 

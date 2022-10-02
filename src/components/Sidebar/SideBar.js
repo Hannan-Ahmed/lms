@@ -2,7 +2,10 @@ import React from 'react'
 import './SideBar.css'
 
 
-function SideBar() {
+function SideBar(props) {
+  
+  const arr=props.sidedata;
+
   return (
     <div>
       {/* Verticle Menu Bar  */}
@@ -35,11 +38,25 @@ function SideBar() {
       {/*          LMS Content in menu bar              */}
 
       <ul className='tags' id='tagi'>
-        <li>Courses</li>
-        <li>Trainers</li>
+        {/* <li>Courses</li>
+        <li>{props.dat.join(' ')}</li>
         <li>Trainees</li>
         <li>Requests</li>
-        <li>settings</li>
+        <li>settings</li> */}
+        
+
+        {
+
+          arr.map((e)=>(
+            <li>{e}</li>
+          ))
+
+        }
+
+
+
+
+
       </ul>
 
     </span>

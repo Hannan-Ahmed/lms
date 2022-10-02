@@ -82,7 +82,7 @@ router.post('/createuser',
 
 
       if (req.body.designation === 'Trainer') {
-        Trainers = await Trainer.create({
+          trainer = await Trainer.create({
           firstname: req.body.firstname,
           lastname: req.body.lastname,
           email: req.body.email,
@@ -97,8 +97,8 @@ router.post('/createuser',
 
         // Payload
         const data = {
-          Trainers: {
-            id: Trainers.id
+          trainer: {
+            id: trainer.id
           }
         }
 
@@ -259,7 +259,7 @@ router.post('/login', [
       }
       //pay load
       const data = {
-        tariner: {
+        trainer: {
           id: trainer.id
         }
       }
@@ -267,7 +267,7 @@ router.post('/login', [
       const trainerauthtoken = jwt.sign(data, jwtsecret);
       console.log(trainerauthtoken);
       t = 't'
-      adminkey = 't'
+      trainerkey = 't'
       success = true;
       res.send({ success, t, trainerkey, trainerauthtoken });
       console.log("trainer matched")

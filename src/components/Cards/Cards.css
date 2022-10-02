@@ -3,7 +3,9 @@
     /* margin-left: 126px; */
     margin-top: 80px;
     /* overflow-y: visible; */
-    grid-gap: 60px;
+    /* grid-gap: 30px; */
+    grid-column-gap: 53px !important;
+    grid-row-gap: 33px !important;
   }
 
   .head .content .grids {
@@ -16,6 +18,7 @@
     grid-template-columns: repeat(auto-fit, 18rem);
     justify-content: center;
     margin-left: 144px;
+    margin-bottom:14px;
   }
   
   /* grid  Styling*/

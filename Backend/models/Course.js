@@ -3,10 +3,11 @@ const { Schema } = mongoose;
 
 const CourseSchema = new Schema({
 
-    admin: {   //similar to Foreign Key 
+    trainer: {   //similar to Foreign Key 
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'admin'
-    },
+        ref: 'Trainer'
+        
+    }, 
 
     course_name: {
         type: String,

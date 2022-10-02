@@ -1,4 +1,4 @@
-import { useState , useContext, useEffect } from "react";
+import { useState, useContext, useEffect } from "react";
 import "../../pages/Register/Register.css";
 import Logo from "../../components/Logo/Logo";
 import { useNavigate } from "react-router-dom";
@@ -42,23 +42,28 @@ const Register = () => {
     console.log(json);
     if (json.adminkey === 't') {
 
-
       console.log(json.adminkey);
       localStorage.setItem('admintoken', json.adminauthtoken)
+      
       navigate('/AdminDashboard')
+
     }
     else if (json.trainerkey === 't') {
       console.log(json.trainerkey);
-      navigate('/AdminDashbaord')
+      localStorage.setItem('trainertoken', json.trainerauthtoken)
+      
+
+      console.log("trainer matched")
+      navigate('/TrainerDashboard')
     }
 
     else if (json.studentkey === 't') {
       console.log(json.studentkey);
-      navigate('/AdminDashbaord')
+      navigate('/StudentDashboard')
     }
 
 
-   
+
   }
 
   const onChange = (e) => {

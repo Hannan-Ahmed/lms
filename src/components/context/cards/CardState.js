@@ -13,8 +13,13 @@ export default function CardState(props) {
     
           headers: {
             'Content-Type': 'application/json',
-            // 'adminauthtoken':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6eyJpZCI6IjYzMzY4NzYyNDMxOGJjNzcxNDk5NTcxYiJ9LCJpYXQiOjE2NjQ1MTc5ODd9.iFX1qNl3VfJoYjpW0HO5BVOB9LyROUn_Ux6NJuP1wm8'
-            'adminauthtoken':localStorage.getItem('admintoken')
+            // 'trainerauthtoken':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0cmFpbmVyIjp7ImlkIjoiNjMzOTQyZDg3ZTYxMzNmMzQ2M2YzZjM0In0sImlhdCI6MTY2NDY5NzA0OH0.u9NkyYNtjYY9yV7FaI_1MVyYD5bJV2ypHFGsawR58Qc'
+            
+            
+            // 'adminauthtoken':'YzZjM0In0sImlhdCI6MTY2NDY5NzA0OH0.u9NkyYNtjYY9yV7FaI_1MVyYD5bJV2ypHFGsawR58Qc'
+
+            
+            "trainerauthtoken":localStorage.getItem('trainertoken')
           },
         });
     

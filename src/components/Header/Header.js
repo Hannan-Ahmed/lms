@@ -22,7 +22,7 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 
 
-function Header() {
+function Header(props) {
   const navigate = useNavigate();
 
 
@@ -62,7 +62,7 @@ function Header() {
   return (
     <div>
       <div className='tops'>
-        <div className='title' >Admin Dashboard</div>
+        <div className='title' >{props.head}</div>
         <div className='image' >
           <AppBar position="static"  >
             <Container maxWidth="xl" >
